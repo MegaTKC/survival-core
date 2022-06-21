@@ -30,10 +30,9 @@ public class BoltBoots implements Listener {
                     Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
                         @Override
                         public void run() {
-                           // do stuff
+                        	e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
                         }
-                    }, 200L, 5);
-                	e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
+                    }, 0L, 200L);
                 }
             }
         }

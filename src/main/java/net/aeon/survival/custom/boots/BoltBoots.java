@@ -31,9 +31,9 @@ public class BoltBoots implements Listener {
     public void OnBoltRemove(InventoryClickEvent e) {
         if (e.getSlot() == 8) {
         	System.out.println("Check a passed");
-            if (e.getClick().equals(ClickType.SHIFT_LEFT) || e.getClick().equals(ClickType.LEFT)) {
+            if ((e.getClick().equals(ClickType.SHIFT_LEFT) || e.getClick().equals(ClickType.LEFT) && !(e.getClick().equals(ClickType.DROP)))) {
             	System.out.println("Check d passed");
-                if (e.getInventory().getItem(e.getSlot()).getItemMeta() != null) {
+                if (e.getInventory().getItem(e.getSlot()) != null) {
                 	System.out.println("Check b passed");
                     ItemStack removedItem = e.getInventory().getItem(e.getSlot());
                     if (removedItem.getItemMeta().getLore().contains("Flash II")) {

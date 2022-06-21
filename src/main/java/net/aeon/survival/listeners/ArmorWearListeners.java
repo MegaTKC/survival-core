@@ -77,7 +77,7 @@ public class ArmorWearListeners implements Listener {
                         } else {
                             return;
                         }
-                        ArmorWearEvent a = new ArmorWearEvent(p, ClickItem, "drop", Type);
+                        ArmorWearEvent a = new ArmorWearEvent(p, ClickItem, "shift", Type);
                         Bukkit.getPluginManager().callEvent(a);
                         if (a.isCancelled()) {
                             e.setCancelled(true);

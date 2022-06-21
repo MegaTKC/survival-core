@@ -52,34 +52,36 @@ public class ArmorWearListeners implements Listener {
         }
         if (e.getClick().equals(ClickType.SHIFT_LEFT)) {
 
-            ItemStack ClickItem = e.getInventory().getItem(e.getSlot());
-            String ClickItemType = ClickItem.getType().toString().toLowerCase();
+            if (e.getInventory().getItem(e.getSlot()) != null) {
+                ItemStack ClickItem = e.getInventory().getItem(e.getSlot());
+                String ClickItemType = ClickItem.getType().toString().toLowerCase();
 
-            // Checks to see if the Clicked slot is an armor slot
-            for (int slot : ArmorSlots) {
-                if (e.getSlot() == slot) {
-                    String Type = null;
-                    if (ClickItemType.contains("helmet")) {
-                        Type = "helmet";
-                    }
+                // Checks to see if the Clicked slot is an armor slot
+                for (int slot : ArmorSlots) {
+                    if (e.getSlot() == slot) {
+                        String Type = null;
+                        if (ClickItemType.contains("helmet")) {
+                            Type = "helmet";
+                        }
 
-                    if (ClickItemType.contains("chestplate")) {
-                        Type = "chestplate";
-                    }
+                        if (ClickItemType.contains("chestplate")) {
+                            Type = "chestplate";
+                        }
 
-                    if (ClickItemType.contains("leggings")) {
-                        Type = "leggings";
-                    }
+                        if (ClickItemType.contains("leggings")) {
+                            Type = "leggings";
+                        }
 
-                    if (ClickItemType.contains("boots")) {
-                        Type = "boots";
-                    } else {
-                        return;
-                    }
-                    ArmorWearEvent a = new ArmorWearEvent(p, ClickItem, "drop", Type);
-                    Bukkit.getPluginManager().callEvent(a);
-                    if (a.isCancelled()) {
-                        e.setCancelled(true);
+                        if (ClickItemType.contains("boots")) {
+                            Type = "boots";
+                        } else {
+                            return;
+                        }
+                        ArmorWearEvent a = new ArmorWearEvent(p, ClickItem, "drop", Type);
+                        Bukkit.getPluginManager().callEvent(a);
+                        if (a.isCancelled()) {
+                            e.setCancelled(true);
+                        }
                     }
                 }
             }

@@ -12,15 +12,15 @@
     <name>survival-core</name>
 
     <description>Aeon networks's core plugin for survival</description>
-    <url>nully.tech</url>
+    <url>aeon.net</url>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
         <repository>
-            <id>PrimCoreRepos-repos</id>
-            <url>https://github.com/Fangoboyo/primplugin/raw/repository</url>
+            <id>EaglerMaven-repos</id>
+            <url>https://github.com/darverdevs/EaglerMavenRepo/raw/main</url>
         </repository>
     </repositories>
 

@@ -1,0 +1,8 @@
+name: Survival-Core
+version: 0.0.1
+
+
+author: MegaTKC
+
+
+main: net.aeon.survival.Main

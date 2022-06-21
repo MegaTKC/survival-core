@@ -1,5 +1,6 @@
 package net.aeon.survival.custom.boots;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,11 +10,14 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import net.aeon.survival.Main;
 import net.aeon.survival.utils.ArmorWearEvent;
 
 import java.util.List;
 
 public class BoltBoots implements Listener {
+	public static Main plugin;
+	
     @EventHandler
     public void onBoltWear(ArmorWearEvent e) {
         if (e.getSlot().equals("boots")) {
@@ -23,7 +27,13 @@ public class BoltBoots implements Listener {
                 List<String> Lore = e.getItem().getItemMeta().getLore();
                 if (Lore.contains(ChatColor.GRAY + "Flash II")) {
                 	System.out.println("Check z passed");
-                    e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
+                    Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
+                        @Override
+                        public void run() {
+                           // do stuff
+                        }
+                    }, 200L, 5);
+                	e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
                 }
             }
         }

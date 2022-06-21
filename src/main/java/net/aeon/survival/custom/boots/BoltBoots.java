@@ -36,9 +36,11 @@ public class BoltBoots implements Listener {
                 if (e.getInventory().getItem(e.getSlot()) != null) {
                 	System.out.println("Check b passed");
                     ItemStack removedItem = e.getInventory().getItem(e.getSlot());
-                    if (removedItem.getItemMeta().getLore().contains("Flash II")) {
-                    	System.out.println("Check c passed");
-                        e.getWhoClicked().removePotionEffect(PotionEffectType.SPEED);
+                    if (removedItem.getItemMeta().getLore() != null) {
+                        if (removedItem.getItemMeta().getLore().contains("Flash II")) {
+                            System.out.println("Check c passed");
+                            e.getWhoClicked().removePotionEffect(PotionEffectType.SPEED);
+                        }
                     }
                 }
             }

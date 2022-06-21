@@ -1,4 +1,4 @@
-package net.aeon.survival.custom.boots;
+package main.java.net.aeon.survival.custom.boots;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -10,8 +10,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import net.aeon.survival.Main;
-import net.aeon.survival.utils.ArmorWearEvent;
+import main.java.net.aeon.survival.Main;
+import main.java.net.aeon.survival.utils.ArmorWearEvent;
 
 import java.util.List;
 

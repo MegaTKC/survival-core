@@ -1,12 +1,9 @@
 package net.aeon.survival;
 
-import net.aeon.survival.listeners.ArmorWearListeners;
-import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import net.aeon.survival.custom.boots.BoltBoots;
+import net.aeon.survival.listeners.ArmorWearListeners;
 import net.aeon.survival.listeners.MobListener;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 	public void onEnable() {

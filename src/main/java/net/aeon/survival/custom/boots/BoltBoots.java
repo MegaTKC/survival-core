@@ -1,5 +1,6 @@
 package net.aeon.survival.custom.boots;
 
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.ClickType;
@@ -20,7 +21,7 @@ public class BoltBoots implements Listener {
             if (e.getItem().getItemMeta().getLore() != null) {
             	System.out.println("Check y passed");
                 List<String> Lore = e.getItem().getItemMeta().getLore();
-                if (Lore.contains("Flash II")) {
+                if (Lore.contains(ChatColor.GRAY + "Flash II")) {
                 	System.out.println("Check z passed");
                     e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
                 }
@@ -37,7 +38,7 @@ public class BoltBoots implements Listener {
                 	System.out.println("Check b passed");
                     ItemStack removedItem = e.getInventory().getItem(e.getSlot());
                     if (removedItem.getItemMeta().getLore() != null) {
-                        if (removedItem.getItemMeta().getLore().contains("Flash II")) {
+                        if (removedItem.getItemMeta().getLore().contains(ChatColor.GRAY + "Flash II")) {
                             System.out.println("Check c passed");
                             e.getWhoClicked().removePotionEffect(PotionEffectType.SPEED);
                         }

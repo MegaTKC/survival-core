@@ -47,6 +47,7 @@ public class BoltBoots implements Listener {
                 	System.out.println("Check b passed");
                     ItemStack removedItem = e.getInventory().getItem(e.getSlot());
                     if (removedItem.getItemMeta().getLore() != null) {
+                    	System.out.println("Check e passed");
                         if (removedItem.getItemMeta().getLore().contains(ChatColor.GRAY + "Flash II")) {
                             System.out.println("Check c passed");
                             e.getWhoClicked().removePotionEffect(PotionEffectType.SPEED);

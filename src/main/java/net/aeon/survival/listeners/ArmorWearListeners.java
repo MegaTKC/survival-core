@@ -1,5 +1,6 @@
 package main.java.net.aeon.survival.listeners;
 
+import net.aeon.survival.utils.ArmorWearEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

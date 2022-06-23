@@ -17,13 +17,13 @@ public class ArmorWearListeners implements Listener {
         Player p = (Player) e.getWhoClicked();
         int[] ArmorSlots = {5, 6, 7, 8};
         if (e.getClick().equals(ClickType.DROP)) {
-            ItemStack DropItem = e.getCurrentItem();
-            String DropItemType = DropItem.getType().toString().toLowerCase();
 
             // Checks to see if the Clicked slot is an armor slot
             for (int slot : ArmorSlots) {
                 if (e.getSlot() == slot) {
                     String Type = null;
+                    ItemStack DropItem = e.getCurrentItem();
+                    String DropItemType = DropItem.getType().toString().toLowerCase();
                     if (DropItemType.contains("helmet")) {
                         Type = "helmet";
                     }
@@ -52,12 +52,12 @@ public class ArmorWearListeners implements Listener {
         if (e.getClick().equals(ClickType.SHIFT_LEFT)) {
 
             if (e.getInventory().getItem(e.getSlot()) != null) {
-                ItemStack ClickItem = e.getInventory().getItem(e.getSlot());
-                String ClickItemType = ClickItem.getType().toString().toLowerCase();
 
                 // Checks to see if the Clicked slot is an armor slot
                 for (int slot : ArmorSlots) {
                     if (e.getSlot() == slot) {
+                        ItemStack ClickItem = e.getInventory().getItem(e.getSlot());
+                        String ClickItemType = ClickItem.getType().toString().toLowerCase();
                         String Type = null;
                         if (ClickItemType.contains("helmet")) {
                             Type = "helmet";

@@ -22,26 +22,26 @@ public class ArmorWearListeners implements Listener {
             for (int slot : ArmorSlots) {
                 if (e.getSlot() == slot) {
                     String Type = null;
-                    ItemStack DropItem = e.getCurrentItem();
-                    String DropItemType = DropItem.getType().toString().toLowerCase();
-                    if (DropItemType.contains("helmet")) {
+                    ItemStack dropItem = e.getCurrentItem();
+                    String dropItemType = dropItem.getType().toString().toLowerCase();
+                    if (dropItemType.contains("helmet")) {
                         Type = "helmet";
                     }
 
-                    if (DropItemType.contains("chestplate")) {
+                    if (dropItemType.contains("chestplate")) {
                         Type = "chestplate";
                     }
 
-                    if (DropItemType.contains("leggings")) {
+                    if (dropItemType.contains("leggings")) {
                         Type = "leggings";
                     }
 
-                    if (DropItemType.contains("boots")) {
+                    if (dropItemType.contains("boots")) {
                         Type = "boots";
                     } else {
                         return;
                     }
-                    ArmorWearEvent a = new ArmorWearEvent(p, DropItem, "drop", Type);
+                    ArmorWearEvent a = new ArmorWearEvent(p, dropItem, "drop", Type);
                     Bukkit.getPluginManager().callEvent(a);
                     if (a.isCancelled()) {
                         e.setCancelled(true);

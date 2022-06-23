@@ -1,7 +1,7 @@
 package main.java.net.aeon.survival.custom.boots;
 
-import net.aeon.survival.Main;
-import net.aeon.survival.utils.ArmorWearEvent;
+import main.java.net.aeon.survival.Main;
+import main.java.net.aeon.survival.utils.ArmorWearEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
@@ -11,9 +11,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
-import main.java.net.aeon.survival.Main;
-import main.java.net.aeon.survival.utils.ArmorWearEvent;
 
 import java.util.List;
 

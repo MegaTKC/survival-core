@@ -1,6 +1,6 @@
-package net.aeon.survival;
+package main.java.net.aeon.survival;
 
-import net.aeon.survival.listeners.ArmorWearListeners;
+import main.java.net.aeon.survival.listeners.ArmorWearListeners;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 

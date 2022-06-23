@@ -25,12 +25,6 @@ public class BoltBoots implements Listener {
                 List<String> Lore = e.getItem().getItemMeta().getLore();
                 if (Lore.contains(ChatColor.GRAY + "Flash II")) {
                 	System.out.println("Check z passed");
-                    Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getInstance(), new Runnable() {
-                        @Override
-                        public void run() {
-                        	e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
-                        }
-                    }, 0L, 200L);
                 }
             }
         }

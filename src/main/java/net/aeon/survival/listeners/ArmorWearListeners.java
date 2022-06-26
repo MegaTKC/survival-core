@@ -1,6 +1,6 @@
 package net.aeon.survival.listeners;
 
-import main.java.net.aeon.survival.utils.ArmorWearEvent;
+import net.aeon.survival.utils.ArmorWearEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,7 +17,7 @@ public class ArmorWearListeners implements Listener {
     public void OnArmorWearByInventoryClick(InventoryClickEvent e) {
         Player p = (Player) e.getWhoClicked();
         int[] ArmorSlots = {5, 6, 7, 8};
-        if (e.getInventory() instanceof PlayerInventory) {
+        if (e.getInventory() instanceof ) {
             if (e.getClick().equals(ClickType.DROP)) {
 
                 // Checks to see if the Clicked slot is an armor slot

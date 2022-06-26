@@ -1,4 +1,4 @@
-package main.java.net.aeon.survival.utils;
+package net.aeon.survival.utils;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;

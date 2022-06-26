@@ -1,4 +1,4 @@
-package main.java.net.aeon.survival.listeners;
+package net.aeon.survival.listeners;
 
 import main.java.net.aeon.survival.utils.ArmorWearEvent;
 import org.bukkit.Bukkit;
@@ -9,7 +9,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 

@@ -1,4 +1,4 @@
-package main.java.net.aeon.survival.utils;
+package net.aeon.survival.utils;
 
 import net.minecraft.server.v1_5_R3.ItemArmor;
 import org.bukkit.craftbukkit.v1_5_R3.inventory.CraftItemStack;

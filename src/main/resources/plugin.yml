@@ -5,4 +5,4 @@ version: 0.0.2
 author: MegaTKC
 
 
-main: main.java.net.aeon.survival.Main
+main:net.aeon.survival.Main

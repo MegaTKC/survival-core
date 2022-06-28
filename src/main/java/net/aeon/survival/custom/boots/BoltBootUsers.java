@@ -1,4 +1,4 @@
-package net.aeon.survival.custom.boots;
+package main.java.net.aeon.survival.custom.boots;
 
 public class BoltBootUsers {
 }

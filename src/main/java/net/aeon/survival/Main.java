@@ -1,7 +1,7 @@
 package main.java.net.aeon.survival;
 
 import main.java.net.aeon.survival.custom.boots.BoltBoots;
-import net.aeon.survival.listeners.ArmorWearListeners;
+import main.java.net.aeon.survival.listeners.ArmorWearListeners;
 import main.java.net.aeon.survival.listeners.MobListener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;

@@ -1,4 +1,4 @@
-package main.java.net.aeon.survival.listeners;
+package net.aeon.survival.listeners;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;

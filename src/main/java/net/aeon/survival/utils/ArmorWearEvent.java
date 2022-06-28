@@ -14,13 +14,14 @@ public class ArmorWearEvent extends Event implements Cancellable {
     private final ItemStack Item;
 
     private final String ClickType;
-    private boolean isCancelled = false;
+    private boolean isCancelled;
 
     public ArmorWearEvent(Player p, ItemStack item, String ClickType, String Type) {
         this.player = p;
         this.Item = item;
         this.ClickType = ClickType;
         this.slot = Type;
+        this.isCancelled = false;
 
     }
     // Sets the getters

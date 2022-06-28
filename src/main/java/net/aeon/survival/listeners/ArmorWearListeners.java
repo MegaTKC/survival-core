@@ -17,7 +17,7 @@ public class ArmorWearListeners implements Listener {
     public void OnArmorWearByInventoryClick(InventoryClickEvent e) {
         Player p = (Player) e.getWhoClicked();
         int[] ArmorSlots = {5, 6, 7, 8};
-        if (e.getInventory() instanceof ) {
+        if (e.getInventory() instanceof PlayerInventory) {
             if (e.getClick().equals(ClickType.DROP)) {
 
                 // Checks to see if the Clicked slot is an armor slot
@@ -52,7 +52,6 @@ public class ArmorWearListeners implements Listener {
                 }
             }
             if (e.getClick().equals(ClickType.SHIFT_LEFT)) {
-
                 if (e.getInventory().getItem(e.getSlot()) != null) {
 
                     // Checks to see if the Clicked slot is an armor slot

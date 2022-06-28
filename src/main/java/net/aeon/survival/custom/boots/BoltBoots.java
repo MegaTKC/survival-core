@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class BoltBoots implements Listener {
             	System.out.println("Check y passed");
                 List<String> Lore = e.getItem().getItemMeta().getLore();
                 if (Lore.contains(ChatColor.GRAY + "Flash II")) {
+                    e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1200 , 2));
                 	System.out.println("Check z passed");
                 }
             }

@@ -44,7 +44,7 @@ public class ArmorWearListeners implements Listener {
                             return;
                         }
                         ArmorWearEvent a = new ArmorWearEvent(p, dropItem, "drop", Type);
-                        Bukkit.getPluginManager().callEvent(a);
+                        Bukkit.getServer().getPluginManager().callEvent(a);
                         if (a.isCancelled()) {
                             e.setCancelled(true);
                         }
@@ -78,7 +78,7 @@ public class ArmorWearListeners implements Listener {
                                 return;
                             }
                             ArmorWearEvent a = new ArmorWearEvent(p, ClickItem, "shift", Type);
-                            Bukkit.getPluginManager().callEvent(a);
+                            Bukkit.getServer().getPluginManager().callEvent(a);
                             if (a.isCancelled()) {
                                 e.setCancelled(true);
                             }
@@ -115,7 +115,7 @@ public class ArmorWearListeners implements Listener {
                 return;
             }
             ArmorWearEvent a = new ArmorWearEvent(p, Item, click, Type);
-            Bukkit.getPluginManager().callEvent(a);
+            Bukkit.getServer().getPluginManager().callEvent(a);
             if (a.isCancelled()) {
                 e.setCancelled(true);
             }
